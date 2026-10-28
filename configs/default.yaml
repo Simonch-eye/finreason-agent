@@ -1,0 +1,74 @@
+# FinReason-Agent 系统全局默认配置文件
+# 遵循 MASTER_SPEC.md 核心准则
+
+system:
+  name: "finreason-agent"
+  version: "0.1.0"
+  log_level: "INFO"
+
+# 1. 认知路由器与模型接入 (Cognitive Tiering)
+llm:
+  # 门房路由器 (Tier 分流，受限 JSON / FSM 解码)
+  router:
+    provider: "openai"
+    model: "gpt-4o-mini"
+    temperature: 0.0
+    timeout: 10
+  # Tier 1 直觉级 (简单混合检索 QA)
+  tier1_fast:
+    provider: "openai"
+    model: "gpt-4o-mini"
+    temperature: 0.1
+    timeout: 15
+  # Tier 2 规范级 (确定性状态机与指标拆解)
+  tier2_standard:
+    provider: "openai"
+    model: "gpt-4o"
+    temperature: 0.0
+    timeout: 30
+  # Tier 3 刑侦级 (ToT/MCTS 深度假设生成与反思)
+  tier3_forensic:
+    provider: "openai"
+    model: "gpt-4o"
+    temperature: 0.2
+    timeout: 60
+
+# 2. 确定性执行层配额 (Sandbox & Code-as-Action)
+sandbox:
+  engine: "duckdb"
+  timeout_seconds: 15
+  max_memory_mb: 1024
+  max_output_rows: 100
+  strict_isolation: true
+  allow_network: false
+  allowed_modules:
+    - "math"
+    - "duckdb"
+    - "pandas"
+    - "numpy"
+    - "decimal"
+    - "datetime"
+
+# 3. 四层分立记忆配额与路径 (Hierarchical Memory)
+memory:
+  working:
+    max_tokens: 4000
+  episodic:
+    storage_path: "data/processed/episodic.duckdb"
+    reflexion_max_depth: 3
+  semantic:
+    chroma_dir: "data/processed/chroma_db"
+    collection_name: "accounting_standards"
+  procedural:
+    skills_registry_dir: "finreason/memory/skills"
+
+# 4. 质量保证与双轨评测参数 (Dual-Track Evals)
+evals:
+  # 轨 1: 绝对数值容差 (|计算值 - 真实值| / 真实值 <= 0.1%)
+  absolute_tolerance_pct: 0.001
+  # 轨 2: 协议双盲裁判去偏 (Swap Bias Test)
+  swap_bias_test: true
+  harness:
+    timeout_per_case: 120
+    benchmark_dir: "data/raw"
+    checkpoint_file: "data/processed/eval_checkpoint.json"

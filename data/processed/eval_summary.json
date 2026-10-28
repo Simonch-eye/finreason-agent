@@ -1,0 +1,1194 @@
+{
+  "total_cases": 20,
+  "passed_cases": 20,
+  "track1_verdict_accuracy": 1.0,
+  "track2_avg_debiased_score": 87.65,
+  "track2_swap_consistency_pct": 1.0,
+  "true_positives": 10,
+  "true_negatives": 10,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "total_duration_sec": 2.85,
+  "results": [
+    {
+      "case_id": "case_001_kangmei_2018",
+      "company_name": "康美药业",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_001_kangmei_2018",
+        "company_name": "康美药业",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.509,
+            "ground_truth_value": 0.509,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.338,
+            "ground_truth_value": 0.337,
+            "absolute_error": 0.0010000000000000009,
+            "relative_error": 0.002967359050445106,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0010 (0.30%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.0024,
+            "ground_truth_value": 0.0024,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_001_kangmei_2018",
+        "debiased_score": 99.75,
+        "evidence_completeness": 1.0,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 0.5,
+        "verdict_comment": "Debiased Score: 99.8/100 | Swap Consistency: CONSISTENT (Diff: 0.5) | Evidence Coverage: 100.0%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 143.04540000011912,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_002_kangdexin_2018",
+      "company_name": "康得新",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_002_kangdexin_2018",
+        "company_name": "康得新",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.435,
+            "ground_truth_value": 0.435,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.377,
+            "ground_truth_value": 0.38,
+            "absolute_error": 0.0030000000000000027,
+            "relative_error": 0.00789473684210527,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0030 (0.79%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.0031,
+            "ground_truth_value": 0.0031,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_002_kangdexin_2018",
+        "debiased_score": 80.0,
+        "evidence_completeness": 0.5,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 80.0/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 50.0%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 136.0530000001745,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_003_furen_2019",
+      "company_name": "辅仁药业",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_003_furen_2019",
+        "company_name": "辅仁药业",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.281,
+            "ground_truth_value": 0.28,
+            "absolute_error": 0.0010000000000000009,
+            "relative_error": 0.0035714285714285744,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0010 (0.36%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.344,
+            "ground_truth_value": 0.35,
+            "absolute_error": 0.006000000000000005,
+            "relative_error": 0.017142857142857158,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0060 (1.71%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.002,
+            "ground_truth_value": 0.002,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_003_furen_2019",
+        "debiased_score": 86.67,
+        "evidence_completeness": 0.667,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 86.7/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 66.7%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 158.53320000132953,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_004_langqi_2020",
+      "company_name": "广州浪奇",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_004_langqi_2020",
+        "company_name": "广州浪奇",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.057,
+            "ground_truth_value": 0.057,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.429,
+            "ground_truth_value": 0.429,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.0015,
+            "ground_truth_value": 0.0015,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_004_langqi_2020",
+        "debiased_score": 99.75,
+        "evidence_completeness": 1.0,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 0.5,
+        "verdict_comment": "Debiased Score: 99.8/100 | Swap Consistency: CONSISTENT (Diff: 0.5) | Evidence Coverage: 100.0%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 108.41749999963213,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_005_fushun_2017",
+      "company_name": "抚顺特钢",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_005_fushun_2017",
+        "company_name": "抚顺特钢",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.035,
+            "ground_truth_value": 0.035,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.588,
+            "ground_truth_value": 0.588,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.001,
+            "ground_truth_value": 0.001,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_005_fushun_2017",
+        "debiased_score": 99.75,
+        "evidence_completeness": 1.0,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 0.5,
+        "verdict_comment": "Debiased Score: 99.8/100 | Swap Consistency: CONSISTENT (Diff: 0.5) | Evidence Coverage: 100.0%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 113.58250000012049,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_006_baoqianli_2017",
+      "company_name": "保千里",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_006_baoqianli_2017",
+        "company_name": "保千里",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.04,
+            "ground_truth_value": 0.04,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.5,
+            "ground_truth_value": 0.5,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.0012,
+            "ground_truth_value": 0.0012,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_006_baoqianli_2017",
+        "debiased_score": 73.33,
+        "evidence_completeness": 0.333,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 73.3/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 33.3%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 129.52770000083547,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_007_dongfangjin_2018",
+      "company_name": "东方金钰",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_007_dongfangjin_2018",
+        "company_name": "东方金钰",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.017,
+            "ground_truth_value": 0.017,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.609,
+            "ground_truth_value": 0.609,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.0018,
+            "ground_truth_value": 0.0018,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_007_dongfangjin_2018",
+        "debiased_score": 99.75,
+        "evidence_completeness": 1.0,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 0.5,
+        "verdict_comment": "Debiased Score: 99.8/100 | Swap Consistency: CONSISTENT (Diff: 0.5) | Evidence Coverage: 100.0%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 140.85400000112713,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_008_suoling_2018",
+      "company_name": "索菱股份",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_008_suoling_2018",
+        "company_name": "索菱股份",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.048,
+            "ground_truth_value": 0.048,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.476,
+            "ground_truth_value": 0.476,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.0022,
+            "ground_truth_value": 0.0022,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_008_suoling_2018",
+        "debiased_score": 86.67,
+        "evidence_completeness": 0.667,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 86.7/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 66.7%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 123.36569999934,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_009_jinzhengda_2019",
+      "company_name": "金正大",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_009_jinzhengda_2019",
+        "company_name": "金正大",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.222,
+            "ground_truth_value": 0.222,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.389,
+            "ground_truth_value": 0.389,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.0028,
+            "ground_truth_value": 0.0028,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_009_jinzhengda_2019",
+        "debiased_score": 99.75,
+        "evidence_completeness": 1.0,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 0.5,
+        "verdict_comment": "Debiased Score: 99.8/100 | Swap Consistency: CONSISTENT (Diff: 0.5) | Evidence Coverage: 100.0%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 131.74359999902663,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_010_yihua_2019",
+      "company_name": "宜华生活",
+      "ground_truth_verdict": "CRITICAL_FRAUD",
+      "predicted_verdict": "CRITICAL_FRAUD",
+      "track1_result": {
+        "case_id": "case_010_yihua_2019",
+        "company_name": "宜华生活",
+        "verdict_correct": true,
+        "predicted_verdict": "CRITICAL_FRAUD",
+        "ground_truth_verdict": "CRITICAL_FRAUD",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.2,
+            "ground_truth_value": 0.2,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.375,
+            "ground_truth_value": 0.375,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.0025,
+            "ground_truth_value": 0.0025,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CRITICAL_FRAUD vs CRITICAL_FRAUD) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_010_yihua_2019",
+        "debiased_score": 86.67,
+        "evidence_completeness": 0.667,
+        "soundness_of_logic": 1.0,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 86.7/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 66.7%, Logic Soundness: 100.0%"
+      },
+      "execution_time_ms": 139.70199999857869,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_051_maotai_2023",
+      "company_name": "贵州茅台",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_051_maotai_2023",
+        "company_name": "贵州茅台",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.231,
+            "ground_truth_value": 0.231,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.0,
+            "ground_truth_value": 0.0,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.025,
+            "ground_truth_value": 0.025,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_051_maotai_2023",
+        "debiased_score": 83.5,
+        "evidence_completeness": 0.85,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 83.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 85.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 111.11600000003818,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_052_catl_2023",
+      "company_name": "宁德时代",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_052_catl_2023",
+        "company_name": "宁德时代",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.203,
+            "ground_truth_value": 0.203,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.125,
+            "ground_truth_value": 0.125,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.021,
+            "ground_truth_value": 0.021,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_052_catl_2023",
+        "debiased_score": 83.5,
+        "evidence_completeness": 0.85,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 83.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 85.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 128.6498000008578,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_053_shenhua_2023",
+      "company_name": "中国神华",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_053_shenhua_2023",
+        "company_name": "中国神华",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.22,
+            "ground_truth_value": 0.22,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.08,
+            "ground_truth_value": 0.08,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.026,
+            "ground_truth_value": 0.026,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_053_shenhua_2023",
+        "debiased_score": 89.5,
+        "evidence_completeness": 1.0,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 89.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 100.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 106.94880000119156,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_054_fuyao_2023",
+      "company_name": "福耀玻璃",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_054_fuyao_2023",
+        "company_name": "福耀玻璃",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.18,
+            "ground_truth_value": 0.18,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.15,
+            "ground_truth_value": 0.15,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.022,
+            "ground_truth_value": 0.022,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_054_fuyao_2023",
+        "debiased_score": 83.5,
+        "evidence_completeness": 0.85,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 83.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 85.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 100.94629999912286,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_055_conch_2023",
+      "company_name": "海螺水泥",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_055_conch_2023",
+        "company_name": "海螺水泥",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.26,
+            "ground_truth_value": 0.26,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.05,
+            "ground_truth_value": 0.05,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.027,
+            "ground_truth_value": 0.027,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_055_conch_2023",
+        "debiased_score": 83.5,
+        "evidence_completeness": 0.85,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 83.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 85.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 107.53169999952661,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_056_midea_2023",
+      "company_name": "美的集团",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_056_midea_2023",
+        "company_name": "美的集团",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.24,
+            "ground_truth_value": 0.24,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.12,
+            "ground_truth_value": 0.12,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.023,
+            "ground_truth_value": 0.023,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_056_midea_2023",
+        "debiased_score": 83.5,
+        "evidence_completeness": 0.85,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 83.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 85.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 91.87689999998838,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_057_hengrui_2023",
+      "company_name": "恒瑞医药",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_057_hengrui_2023",
+        "company_name": "恒瑞医药",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.32,
+            "ground_truth_value": 0.32,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.02,
+            "ground_truth_value": 0.02,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.025,
+            "ground_truth_value": 0.025,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_057_hengrui_2023",
+        "debiased_score": 83.5,
+        "evidence_completeness": 0.85,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 83.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 85.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 94.3598000012571,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_058_cypc_2023",
+      "company_name": "长江电力",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_058_cypc_2023",
+        "company_name": "长江电力",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.05,
+            "ground_truth_value": 0.05,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.45,
+            "ground_truth_value": 0.45,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.019,
+            "ground_truth_value": 0.019,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_058_cypc_2023",
+        "debiased_score": 83.5,
+        "evidence_completeness": 0.85,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 83.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 85.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 110.53879999963101,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_059_yili_2023",
+      "company_name": "伊利股份",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_059_yili_2023",
+        "company_name": "伊利股份",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.16,
+            "ground_truth_value": 0.16,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.22,
+            "ground_truth_value": 0.22,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.021,
+            "ground_truth_value": 0.021,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_059_yili_2023",
+        "debiased_score": 83.5,
+        "evidence_completeness": 0.85,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 83.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 85.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 96.49770000032731,
+      "overall_success": true
+    },
+    {
+      "case_id": "case_060_mindray_2023",
+      "company_name": "迈瑞医疗",
+      "ground_truth_verdict": "CLEAN_PASS",
+      "predicted_verdict": "CLEAN_PASS",
+      "track1_result": {
+        "case_id": "case_060_mindray_2023",
+        "company_name": "迈瑞医疗",
+        "verdict_correct": true,
+        "predicted_verdict": "CLEAN_PASS",
+        "ground_truth_verdict": "CLEAN_PASS",
+        "metric_checks": [
+          {
+            "metric_name": "cash_ratio",
+            "calculated_value": 0.38,
+            "ground_truth_value": 0.38,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "debt_ratio",
+            "calculated_value": 0.01,
+            "ground_truth_value": 0.01,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          },
+          {
+            "metric_name": "interest_yield",
+            "calculated_value": 0.028,
+            "ground_truth_value": 0.028,
+            "absolute_error": 0.0,
+            "relative_error": 0.0,
+            "passed": true,
+            "tolerance_pct": 0.05,
+            "notes": "Diff: 0.0000 (0.00%) vs Tol: 5.00%"
+          }
+        ],
+        "overall_passed": true,
+        "summary": "Verdict: PASS (CLEAN_PASS vs CLEAN_PASS) | Metrics: 3/3 passed."
+      },
+      "track2_result": {
+        "case_id": "case_060_mindray_2023",
+        "debiased_score": 83.5,
+        "evidence_completeness": 0.85,
+        "soundness_of_logic": 0.7,
+        "anti_hallucination_score": 1.0,
+        "swap_consistent": true,
+        "swap_discrepancy": 1.0,
+        "verdict_comment": "Debiased Score: 83.5/100 | Swap Consistency: CONSISTENT (Diff: 1.0) | Evidence Coverage: 85.0%, Logic Soundness: 70.0%"
+      },
+      "execution_time_ms": 99.33219999948051,
+      "overall_success": true
+    }
+  ]
+}

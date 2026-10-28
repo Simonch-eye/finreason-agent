@@ -1,0 +1,82 @@
+# ==============================================================================
+# FinReason-Agent Git Ignore Rules
+# ==============================================================================
+
+# 1. Python 编译字节码与缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 2. 虚拟环境与依赖
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# 3. 单元测试与覆盖率缓存
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+htmlcov/
+
+# 4. 运行时数据与评测断点 (保留样例，忽略本地运行产生的大量临时文件)
+data/processed/eval_checkpoint.json
+data/processed/chroma_db/
+*.duckdb-wal
+*.duckdb.tmp
+logs/
+*.log
+
+# 5. IDE 与操作系统生成文件
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# 6. 本地密钥与环境变量 (防止 API Key 意外泄露上传至 GitHub!)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# 7. 临时目录与临时压缩包
+temp/
+tmp/
+scratch/
+ci_exports/
+finetune_export/
+*.zip
+*.tar.gz

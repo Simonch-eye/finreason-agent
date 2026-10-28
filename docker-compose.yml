@@ -1,0 +1,65 @@
+# ==============================================================================
+# FinReason-Agent 多容器协同编排 (Docker Compose Orchestration)
+# 协同启动：
+#   1. finreason-api: FastAPI RESTful 微服务 (端口 8000，含 Swagger 在线调试文档)
+#   2. finreason-ui : Streamlit 金融刑侦审计大屏 (端口 8501)
+# ==============================================================================
+
+version: "3.8"
+
+services:
+  # ----------------------------------------------------------------------------
+  # 1. FinReason-Agent 核心 RESTful API 引擎
+  # ----------------------------------------------------------------------------
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: finreason-api
+    restart: unless-stopped
+    command: ["finreason", "serve", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL:-}
+    volumes:
+      - ./data:/app/data
+      - ./configs:/app/configs
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - finreason-net
+
+  # ----------------------------------------------------------------------------
+  # 2. FinReason-Agent Streamlit 交互式可视化审计工作台
+  # ----------------------------------------------------------------------------
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: finreason-ui
+    restart: unless-stopped
+    command: ["streamlit", "run", "web_app.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - FINREASON_API_URL=http://api:8000
+    volumes:
+      - ./data:/app/data
+      - ./configs:/app/configs
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - finreason-net
+
+networks:
+  finreason-net:
+    driver: bridge

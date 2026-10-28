@@ -1,0 +1,61 @@
+name: FinReason CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  test-and-lint:
+    name: 自动化测试与代码规范校验 (Pytest 55 Cases & Lint)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Python 3.11 运行环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: 安装项目核心与测试依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install pytest pytest-asyncio httpx fastapi uvicorn streamlit ruff
+
+      - name: 执行代码质量与静态规范扫描 (Ruff Lint)
+        run: |
+          ruff check finreason tests --select=E,F,W --ignore=E501
+
+      - name: 运行 55 项全量回归测试套件 (Pytest)
+        run: |
+          python -m pytest tests -v --tb=short
+
+      - name: 验证 100 案金标准双轨评测大比武 (Benchmark Verification)
+        run: |
+          finreason eval --suite 20
+          finreason export-data --output-dir ./ci_exports
+
+  docker-build-verify:
+    name: Docker 镜像生产级构建验证
+    runs-on: ubuntu-latest
+    needs: test-and-lint
+
+    steps:
+      - name: 检出代码仓库
+        uses: actions/checkout@v4
+
+      - name: 设置 Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: 构建 FinReason-Agent 镜像
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: finreason-agent:ci-test
